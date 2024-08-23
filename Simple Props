@@ -1,0 +1,46 @@
+App.jsx:
+
+
+import React from 'react'
+import './App.css'
+import Card from './Card.jsx'
+
+function App() {
+
+  return (
+    <div>
+
+      <Card text="Know More" color="bg-red-500" />
+
+      <br />
+
+      <Card text="Download" color="bg-green-500" />
+      
+    </div>
+  )
+}
+
+export default App
+
+
+
+
+Card.jsx:
+
+
+import React from 'react';
+
+function Card({ text, color}) {
+  return (
+
+    <div>
+
+        <button className={`${color} rounded-md py-3`}>
+            {text}
+        </button>
+        
+    </div>
+  );
+}
+
+export default Card;
