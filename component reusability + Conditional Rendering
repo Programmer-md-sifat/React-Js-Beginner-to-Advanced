@@ -36,18 +36,21 @@ const Card = () => {
               "https://images.unsplash.com/photo-1633174524778-61a18ee54490?q=80&w=1496&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             name: "Amazon Basics",
             desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae rerum",
+            instock: true,
           },
           {
             image:
               "https://images.unsplash.com/photo-1627313433073-a98d074772e5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             name: "Dialy Objects",
             desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae rerum",
+            instock: false,
           },
           {
             image:
               "https://images.unsplash.com/photo-1511022542517-3d4a8183bd8a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             name: "Apple",
             desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae rerum",
+            instock: false,
           },
       
 
@@ -59,7 +62,7 @@ const Card = () => {
     {data.map((item, index) => (
       <div
          key={index}
-        className="w-64 bg-zinc-100 rounded-md"
+        className="w-64 bg-black-500 rounded-md"
       >
          <div className="h-32 bg-zinc-300">
            <img
@@ -72,6 +75,10 @@ const Card = () => {
            <h2 className="font-semibold text-2xl">{item.name}</h2>
            <p className="text-md mt-5">{item.desc}</p>
          </div>
+
+         <button className={`px-4 py-3 ${item.instock ? "bg-orange-500" : "bg-red-500"} text-lg rounded-xl`}>
+            {item.instock ? "In Stock" : "Out of Stock"}
+         </button>
        </div>
 
     ))}
@@ -81,3 +88,5 @@ const Card = () => {
 };
 
 export default Card;
+
+
