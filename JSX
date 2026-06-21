@@ -1,0 +1,11 @@
+function App() {
+  const year = 2026;
+
+  return (
+    <div>
+      <h1>Hello, React!</h1>
+      <p>{year}</p>
+      <p className="subtitle">Welcome to React</p>
+    </div>
+  );
+}
