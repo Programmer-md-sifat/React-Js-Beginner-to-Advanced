@@ -1,0 +1,17 @@
+function UserCard({ name, role }) {
+  return (
+    <div className="user-card">
+      <h2>{name}</h2>
+      <p>{role}</p>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <div>
+      <UserCard name="Alice" role="Developer" />
+      <UserCard name="Bob" role="Designer" />
+    </div>
+  );
+}
