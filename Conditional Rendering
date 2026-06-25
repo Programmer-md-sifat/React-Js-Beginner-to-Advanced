@@ -1,0 +1,15 @@
+function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  return (
+    <div>
+      <p id="status">{isLoggedIn ? 'Welcome back!' : 'Please log in'}</p>
+      {isLoggedIn ? (
+        <button id="logout-btn" onClick={() => setIsLoggedIn(false)}>Log Out</button>
+      ) : (
+        <button id="login-btn" onClick={() => setIsLoggedIn(true)}>Log In</button>
+      )}
+      {isLoggedIn && <span id="badge">Online</span>}
+    </div>
+  );
+}
